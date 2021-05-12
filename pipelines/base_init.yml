@@ -154,6 +154,6 @@ pipelines:
         - curl -fL https://getcli.jfrog.io | sh
         - sudo apt-get install -y jq
         - cp jfrog  `which jfrog`
-        - retry_command jfrog c add --artifactory-url $int_Artifactory_url --user $int_Artifactory_user --apikey $int_Artifactory_apikey --interactive=false
+        - jfrog c add --artifactory-url $int_Artifactory_url --user $int_Artifactory_user --apikey $int_Artifactory_apikey --interactive=false
         - "cd ${res_demo_gitRepo_resourcePath}"
         - "./scripts/create_entities.sh"
